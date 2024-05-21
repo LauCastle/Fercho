@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="actividad4C_cursor.css">
+    <link rel="stylesheet" href="actividad4A_accesible.css" id="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="text">¡Bienvenido!</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul class="navbar-list">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#cuartos">Cuartos</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+            </ul>
+        </nav>
+        <a href="/formulario.html" class="btn btn-formulario">
+            <span class="text text-1">Formulario</span>
+        </a>
+    </div>
+    <div class="diseño-btn">
+        <button onclick="setStyle('style.css')">Diseño estándar</button>
+        <button onclick="setStyle('actividad4A_accesible.css')">Diseño accesible</button>
+    </div>
+    <div class="center-image">
+        <img src="85115609.jpg" alt="Descripción de la imagen">
+    </div>
+
+    <script src="cambios.js"></script>
+</body>
+</html>

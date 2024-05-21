@@ -1,0 +1,22 @@
+html, body{
+    cursor: url('cursor.png'), auto;
+}
+
+a[href="#cuartos"]:hover{
+    cursor: url('cama.png'), auto;
+}
+
+a[href="#mapa"]:hover{
+    cursor: url('mapa.png'), auto;
+}
+a:hover{
+    cursor: url('cursor.png'), auto;
+}
+
+.text:hover{
+    cursor: url('caja-de-texto.png'), auto;
+}
+
+.diseño-btn button:hover{
+    cursor: url('seleccion.png'), auto;
+}

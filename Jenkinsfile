@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Desplegar usando http-server
-                    sh 'nohup npm start &'
+                    sh 'npm start &'
                 }
             }
         }

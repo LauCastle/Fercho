@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Desplegar usando http-server
-                    bat 'php.exe -S localhost:8000'
+                    bat 'php.exe -S localhost:8000 -t .'
                 }
             }
         }

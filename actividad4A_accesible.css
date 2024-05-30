@@ -4,7 +4,7 @@
 body, input, button, textarea {
     font-size: 25px; 
     color: white; 
-    background-color: #000; 
+    background-color: #d4d4d4; 
     cursor: url('cursor.png'), auto;
 }
 

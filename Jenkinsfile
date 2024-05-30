@@ -1,5 +1,5 @@
 pipeline {
-     agent any
+    agent any
     environment {
         MYSQL_URL = credentials("MYSQL_URL")
         MYSQL_USER = credentials("MYSQL_USER")
@@ -29,42 +29,40 @@ pipeline {
     }
     post {
         always {
-            script{
-                //destinatarios
-                emailyect(
+            script {
+                // Configuración del remitente y destinatarios
+                emailext (
                     subject: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                    body: """<p>Build ${env.HOB_NAME} #${env.BUILD_NUMBER} finished with
-                    status: ${currentBuild.currentResult}</p>
-                    <p>Check console output at <a href="${env.BUILD_URL}"></a></p>""",
+                    body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} finished with status: ${currentBuild.currentResult}</p>
+                             <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
                     to: 'lcastillo13@ucol.mx',
                     from: 'lcastillo13@ucol.mx',
                 )
             }
         }
-        success{
-            script{
-                //notificación
-                emailyect(
+        success {
+            script {
+                // Notificación en caso de éxito
+                emailext (
                     subject: "SUCCESS: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                    body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} finished successfully. </p>
-                    <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
+                    body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} finished successfully.</p>
+                             <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
                     to: 'lcastillo13@ucol.mx',
                     from: 'lcastillo13@ucol.mx',
-
                 )
             }
         }
-        failure{
-            script{
-                emailyect(
+        failure {
+            script {
+                // Notificación en caso de fallo
+                emailext (
                     subject: "FAILURE: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                    body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NAME} failed. </p>
-                    <p>Check console output at <a href="${env.BUILD_URL}">${env.BUIL_URL}</a></p>""",
-                    to: 'lcastillo13@ucol.mx'
+                    body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} failed.</p>
+                             <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
+                    to: 'lcastillo13@ucol.mx',
                     from: 'lcastillo13@ucol.mx',
                 )
             }
         }
     }
 }
-

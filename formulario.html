@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="actividad4C_cursor.css">
+    <link rel="stylesheet" href="actividad4A_accesible.css" id="stylesheet">
+</head>
+<body>
+    <header><!--Contiene el titulo del formulario-->
+        <h1>Formulario de Clientes</h1>
+    </header>
+    <div class="diseño-btn">
+        <button onclick="setStyle('style.css')">Diseño </button>
+        <button onclick="setStyle('actividad4A_accesible.css')">Diseño accesible</button>
+    </div>
+    <div class="container">
+        <div class="row"> <!-- Primera fila -->
+            <section>
+                <h3>PERSONAS</h3>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" required><br>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" required><br>
+                <label for="confcontraseña">Confirmar Contraseña</label>
+                <input type="password" id="confcontraseña" required><br>
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" required><br>
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" required><br>
+                <label for="provincia">Provincia</label>
+                <input type="text" id="provincia" required><br>
+                <label for="numhuspedes">Número de huéspedes</label>
+                <input type="number" id="numhuspedes" required>
+            </section>
+            <section>
+                <h3>Tipo de habitación</h3>
+                <input type="radio" name="habitacion" id="individual">
+                <label for="individual">Individual</label><br>
+                <input type="radio" name="habitacion" id="doble">
+                <label for="doble">Doble</label><br>
+                <input type="radio" name="habitacion" id="suite">
+                <label for="suite">Suite</label>
+            </section>
+        </div>
+        <div class="row"> <!-- Segunda fila -->
+            <section>
+                <h3>Servicios</h3>
+                <div style="display: flex; justify-content: space-around;">
+                    <div>
+                        <input type="checkbox" id="aire" name="servicio">
+                        <label for="aire">Aire acondicionado</label><br>
+                        <input type="checkbox" id="caja" name="servicio">
+                        <label for="caja">Caja fuerte</label><br>
+                        <input type="checkbox" id="minibar" name="servicio">
+                        <label for="minibar">Minibar</label><br>
+                        <input type="checkbox" id="internet" name="servicio">
+                        <label for="internet">Conexión a Internet</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="almohadas" name="servicio">
+                        <label for="almohadas">Almohadas</label><br>
+                        <input type="checkbox" id="detector" name="servicio">
+                        <label for="detector">Detector de humo</label><br>
+                        <input type="checkbox" id="escritorio" name="servicio">
+                        <label for="escritorio">Escritorio</label><br>
+                        <input type="checkbox" id="wifi" name="servicio">
+                        <label for="wifi">WI-FI</label><br>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Pensión</h3>
+                <input type="checkbox" name="pension" id="alojamiento">
+                <label for="alojamiento">Alojamiento</label><br>
+                <input type="radio" name="pension" id="desayuno">
+                <label for="desayuno">Desayuno</label><br>
+                <input type="radio" name="pension" id="media">
+                <label for="media">Media</label><br>
+                <input type="radio" name="pension" id="completa">
+                <label for="completa">Completa</label>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <button type="submit" class="btn" >Enviar</button>
+        <button type="reset" class="btn-eliminar">Eliminar</button>
+    </footer>
+    <script src="cambios.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "C:\\Users\\Colibecas\\OneDrive\\Documentos\\GitHub\\Fercho\\formulario.html"
+                bat 'php.exe -S localhost:8000 -t .'
             }
         }
     }

@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh '/'
+                sh "C:\Users\Colibecas\OneDrive\Documentos\GitHub\Fercho"
             }
         }
     }
